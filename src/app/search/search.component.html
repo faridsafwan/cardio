@@ -1,0 +1,11 @@
+<div id="search-component" class="one-edge-shadow">
+  <img class="image" src="./assets/slice image/ic-search-grey.png/">
+  <input #searchBox id="search-box" class="search-box" (keyup)="search(searchBox.value)" placeholder="Search for a Challenge" />
+  <ul class="search-result">
+    <li *ngFor="let cardio of cardios$ | async">
+      <a routerLink="/detail/{{cardio.id}}">
+        {{cardio.name}}
+      </a>
+    </li>
+  </ul>
+</div>

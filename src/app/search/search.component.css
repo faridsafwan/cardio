@@ -1,0 +1,31 @@
+.search-box {
+    border: none;
+    padding: 5%;
+    
+    }
+    ::-webkit-input-placeholder {
+        font-style: italic;
+     }
+     :-moz-placeholder {
+        font-style: italic;  
+     }
+     ::-moz-placeholder {
+        font-style: italic;  
+     }
+     :-ms-input-placeholder {  
+        font-style: italic; 
+     }
+     
+.one-edge-shadow {
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+        box-shadow: 0 8px 6px -6px black;
+    }
+
+.image{
+    margin: 5%;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}

@@ -1,0 +1,30 @@
+<div class="top">
+  <h5>
+    <img src="./assets/slice image/ic-toolbar-timeline.png" alt="Smiley face" align="left">Cardio Challenges
+    <img src="./assets/slice image/ic-dropdown.png" alt="Smiley face" align="middle">
+  </h5>
+</div>
+<app-search></app-search>
+<app-slider (valueChange)="filterCardio = $event "></app-slider>
+<div class="cardio">
+  <div class="container" *ngFor="let cardio of cardios | cardio: filterCardio">
+    <a routerLink="/detail/{{cardio.id}}">
+      <img src="{{cardio.img}}" alt="cardio" style="width:100%;">
+      <div class="bottom-left">
+        <img src="./assets/slice image/ic-dot.png">
+        <font color="orange">{{cardio.level}}</font>
+        <font color="grey"> |
+          <img src="./assets/slice image/ic-burn.png"> {{cardio.calories}} calories |</font>
+        + {{cardio.points}} Points</div>
+      <div class="top-left">
+        <img src="./assets/slice image/ic-cardio.png">
+      </div>
+      <div class="top-right">
+        <img src="./assets/slice image/ic-bookmark.png">
+      </div>
+      <div class="centered">
+        <h4>{{cardio.name}}</h4>
+      </div>
+    </a>
+  </div>
+</div>

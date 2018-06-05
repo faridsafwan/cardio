@@ -1,0 +1,11 @@
+<div *ngIf="cardio">
+  <h2>{{ cardio.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{cardio.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="cardio.name" placeholder="name"/>
+    </label>
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+</div>
